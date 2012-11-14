@@ -10,7 +10,7 @@ package controllers
 import ("github.com/gorilla/mux"
 	"net/http"
 	"fmt"
-	"template"
+	"github.com/thesyncim/playground/website/template"
 	"github.com/gorilla/sessions"
 
 

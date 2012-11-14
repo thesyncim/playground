@@ -10,7 +10,7 @@ package website
 
 import ("github.com/gorilla/mux"
 	"net/http"
-	"controllers"
+	"github.com/thesyncim/playground/website/controllers"
 
 )
 
