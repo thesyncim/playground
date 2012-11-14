@@ -10,7 +10,7 @@ package template
 import (
 	"net/http"
 	"html/template"
-	"controllers"
+	"github.com/thesyncim/playground/website/controllers"
 )
 
 var templates = template.Must(template.ParseFiles("edit.html", "view.html"))
