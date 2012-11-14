@@ -10,7 +10,7 @@ package controllers
 import ("github.com/gorilla/mux"
 	"net/http"
 	"fmt"
-	"github.com/thesyncim/playground/website/template"
+	//"github.com/thesyncim/playground/website/template"
 	"github.com/gorilla/sessions"
 
 
@@ -18,10 +18,6 @@ import ("github.com/gorilla/mux"
 
 var Store = sessions.NewCookieStore([]byte("something-very-secret"))
 
-type Entry struct {
-	Title	  string
-	Content	string
-}
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
 
@@ -29,7 +25,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	entry.Title = "New Go Templates (mid-2011)"
 	entry.Content = "A trivial example of how to use them.  see documentation and Go source code/tests for more examples"
 
-	template.RenderTemplate(w, "/home/syncim/IdeaProjects/playground/src/template/projectos/index.html", entry)
+	//template.RenderTemplate(w, "/home/syncim/IdeaProjects/playground/src/template/projectos/index.html", entry)
 	session, _ := Store.Get(r, "session-name")
 
 	session.Values["teste"] = 1

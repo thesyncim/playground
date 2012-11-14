@@ -10,12 +10,17 @@ package template
 import (
 	"net/http"
 	"html/template"
-	"github.com/thesyncim/playground/website/controllers"
+	//"github.com/thesyncim/playground/website/controllers"
 )
 
+
+type Entry struct {
+	Title	  string
+	Content	string
+}
 var templates = template.Must(template.ParseFiles("edit.html", "view.html"))
 
-func RenderTemplate(w http.ResponseWriter, tmpl string, p *controllers.Entry) {
+func RenderTemplate(w http.ResponseWriter, tmpl string, p *Entry) {
 	err := templates.ExecuteTemplate(w, tmpl + ".html", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
